@@ -1,0 +1,33 @@
+﻿{% load staticfiles %} 
+<head>
+<meta charset="utf-8">
+<title> added </title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'><FONT face=黑体 color=blue > 图书增加</FONT> </h1>
+<hr/>
+
+      
+    <form action = '/' >
+     <p>  <input type='submit' value='返回上一页'/> </p>
+   </form>
+   <p>     图书添加成功</p> 
+
+   <p>     图书目录如下：</p> 
+
+      {% if  allbook %}
+        
+     <table order='1'>
+           {% for book  in  allbook%}
+          <tr>  
+              <td> <a  href='detail/{{book.title}}'>{{book.title}} </td>
+              <td><a  href='delete/{{book.title}}'>  删除 </a></td>
+              <td><a  href= ''>  更新 </a></td>
+           </tr>  
+            {% endfor%}
+      </table> 
+  
+		  {%endif%} 
+    
+</body>
+</html>

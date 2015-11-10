@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<title>book</title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'><FONT face=黑体 color=blue >图书管理系统 </FONT> </h1>
+<hr/>
+
+
+
+<form  align='center' action='/gosearch/' >
+<p> <input type='submit'  style="width:150px;height:80px"value='图书查询'/> </p> 
+</form>
+
+<form align='center' action='/showlist/' >
+	
+<p> <input type='submit' style="width:150px;height:80px" value='查看图书目录'/> </p> 
+</form>
+
+<form align='center' action='/addbook/' >
+<p> <input type='submit' style="width:150px;height:80px" value='添加书籍'/> </p> 
+</form>
+
+
+
+
+</body>
+</html>

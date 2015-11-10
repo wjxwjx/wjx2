@@ -1,0 +1,25 @@
+﻿{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<title> addbook</title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'><FONT face=黑体 color=blue > 图书增加</FONT> </h1>
+<hr/>
+
+
+<form   align='center' action='added' method='get'>
+<p><FONT face=黑体 color=blue size='5'> 书籍名称：</FONT><input type='text' name='title'/> 
+  <p><FONT face=黑体 color=blue size='5'> 书籍ISBN：</FONT><input type='text' name='isbn'/> 
+    <p><FONT face=黑体 color=blue size='5'>出版商：</FONT><input type='text' name='publisher'/> 
+      <p><FONT face=黑体 color=blue size='5'> 出版日期：</FONT><input type='date' name='publishdate'/> 
+        <p><FONT face=黑体 color=blue size='5'> 价格：</FONT><input type='text' name='price'/> 
+          <p><FONT face=黑体 color=blue size='5'> authorID：</FONT><input type='text' name='authorid'/> 
+<p> <input type='submit' style="width:80px;height:30px" value='添加'/> </p>
+</form>
+   <form  align='center' action= '/' >
+<p> <input type='submit'style="width:80px;height:30px" value='返回首页'/> </p> 
+</form>
+    
+</body>
+</html>

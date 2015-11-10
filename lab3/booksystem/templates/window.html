@@ -1,0 +1,21 @@
+{% load staticfiles %}  
+<head>
+<meta charset="utf-8">
+<title> showlist </title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'>图书管理系统 </h1>
+
+    <p>
+	</p>
+	<div>
+      {% if  allbook %}
+        <ul>
+           {% for book  in  allbook%}
+             <li>{{book}}  </li>
+        </ul>
+		
+	</div>
+    
+</body>
+</html>

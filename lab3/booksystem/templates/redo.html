@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<title>redo</title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'><FONT face=黑体 color=blue > 图书更新</FONT> </h1>
+<hr/>
+
+<form   align='center' action='/redone/' method='get'>
+
+<p><FONT face=黑体 color=blue size='4'> title:</FONT><input type='text' name='title' value={{title}}>  </p>
+<p><FONT face=黑体 color=blue siae='4' > isbn:</FONT><input type='text' name='isbn' value={{bookisbn}}>  </p>
+
+<p><FONT face=黑体 color=blue size='4'> publisher:</FONT><input type='text' name='publisher' value={{publisher}}>  </p>
+<p><FONT face=黑体 color=blue size='4'>publishdate:</FONT><input type='date' name='publishdate' value={{publishdate}}>  </p>
+<p><FONT face=黑体 color=blue size='4'> price:</FONT><input type='text' name='price' value={{price}}>  </p>
+
+<p><FONT face=黑体 color=blue size='4'> Authorname:</FONT><input type='text' name='authorname' value={{author.name}}>  </p>
+<p><FONT face=黑体 color=blue size='4'>Authorage:</FONT><input type='text' name='authorage' value={{author.age}}>  </p>
+<p> <FONT face=黑体 color=blue size='4'> Authorcountry</FONT><input type='text' name='authorcountry' value={{author.country}}>  </p>
+<p><FONT face=黑体 color=blue size='4'> Authorid：</FONT><input type='text' name='authorid' value={{author.AuthorID}}>  </p>
+<p><input type='submit' value='完成更新'/> </p>
+</form>
+
+
+
+
+
+
+	<form action='/showlist/' >
+   <input type='submit' value='返回上一页'/> 
+   </form>
+
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

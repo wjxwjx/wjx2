@@ -1,0 +1,20 @@
+{% load staticfiles %}  
+<head>
+<meta charset="utf-8">
+<title> toaddauthor</title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'><FONT face=黑体 color=blue > 新作者增加</FONT> </h1>
+<hr/>
+
+<form   align='center' action='toaddauthored' method='get'>
+<p>添加作者名称：<input type='text' name='name'/> 
+  <p>输入age：<input type='text' name='age'/> 
+     <p>输入国籍：<input type='text' name='country'/> 
+       <p>输入authorID：<input type='text' name='authorid'/> 
+<p> <input type='submit' value='添加'/> </p>
+</form>
+   
+    
+</body>
+</html>

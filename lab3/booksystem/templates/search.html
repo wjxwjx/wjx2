@@ -1,0 +1,40 @@
+﻿{% load staticfiles %} 
+<head>
+<meta charset="utf-8">
+<title>search</title>
+</head>
+<body  background= "{% static "images/2.jpg" %}" alt="Picture of book"   >
+<h1 align='center'>图书查询 </h1>
+<hr/>
+
+<form   action='/' >
+<p> <input type='submit'style="width:80px;height:30px" value='返回首页'/> </p> 
+</form>
+  
+<table  width="300px" bgcolor='#F0FFFF' border='1' >
+	{% if person%}
+	<tr><td> 作者为:{{person}}</td></tr>
+    <tr>
+    	<td>
+    	<div>
+      {% if  bookname %}
+        <ul>
+           {% for book  in  bookname %}
+             <li>{{book.title}}  </li>
+             {% endfor%}
+        </ul>
+      {%endif%}	
+	   </div>
+        </td>
+	</tr>
+	{% else%}
+	 <p>查无此作者</p>
+
+{% endif%}
+</table>
+
+<form action='gosearch' >
+<p> <input type='submit'style="width:80px;height:30px" value='返回上一页' /> </p> 
+</form>
+</body>
+</html>   
